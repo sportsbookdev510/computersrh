@@ -1,0 +1,13 @@
+{"preview": false, "mode": "hosted-registration", "server_now":
+"2026-10-08T23:27:49.075333Z", "early_access_at": "2026-10-08T16:00:00Z",
+"public_access_at": "2026-10-09T16:00:00Z", "applications_enabled": true,
+"social_revision": 2, "applications_open": false, "applications_close_at":
+"2026-10-06T16:00:00Z", "social": {"account_url": "https://x.com/computersrh",
+"tweet_url": "https://x.com/computersrh/status/2104630991939879423"},
+"social_verification": "self-attested", "wallet_type": "EVM EOA", "x_auth":
+{"available": true, "mode": "supabase"}, "game_authentication":
+"wallet-signature", "game_access": {"phase": "held", "managed": false,
+"schedule_editable": true, "owner_enabled": false, "early_access_at":
+"2026-10-08T16:00:00Z", "public_access_at": "2026-10-09T16:00:00Z",
+"server_now": "2026-10-08T23:27:49Z"}, "game_entry_path": "/preview/plaza32/",
+"game_launch_enabled": true}

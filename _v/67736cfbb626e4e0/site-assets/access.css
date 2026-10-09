@@ -1,0 +1,1362 @@
+/* A compact access screen within the same cream and lilac application window. */
+.access-window {
+  max-width: 940px;
+}
+.access-window.is-expanded {
+  max-width: 1160px;
+}
+.access-window .access-interior {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 0;
+  padding: 46px 44px 40px;
+}
+.access-panel {
+  width: 100%;
+  max-width: 690px;
+  text-align: center;
+}
+.access-title {
+  margin: 0 auto 26px;
+  max-width: 650px;
+  color: var(--cream);
+  font: 700 46px/1.18 var(--display);
+  letter-spacing: -0.6px;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+.access-panel[data-membership="listed"] .access-title {
+  color: var(--mint);
+}
+.access-wallet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 15px;
+  min-height: 44px;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 3px 15px;
+  border: 1px solid #68638e;
+  background: #101c38;
+  color: #f2e5ef;
+  font: 400 16px/1.4 var(--body);
+}
+.access-wallet-label {
+  color: #b8aed7;
+  font-size: 13px;
+}
+.access-wallet-address {
+  font-variant-numeric: tabular-nums;
+}
+.access-opening {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px 12px;
+  margin: 28px 0 16px;
+  padding-top: 23px;
+  border-top: 1px solid #65618e80;
+  font: 400 15px/1.5 var(--body);
+  color: #c7bfdf;
+}
+.access-opening time {
+  color: #fff0df;
+  white-space: nowrap;
+}
+.access-countdown {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0 auto;
+  max-width: 580px;
+  padding: 0;
+}
+.access-countdown > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-width: 0;
+  padding: 20px 8px 17px;
+  background: #09152f;
+  border: 1px solid #65618e;
+  box-shadow: inset 0 3px #050e24, 0 3px #040c20;
+  border-radius: 2px;
+}
+.access-countdown > div:after {
+  display: none;
+}
+.access-countdown strong {
+  font: 700 43px/1 var(--display);
+  letter-spacing: 1px;
+  color: #fff0d9;
+  font-variant-numeric: tabular-nums;
+}
+.access-countdown span {
+  margin-top: 0;
+  font: 400 13px/1.25 var(--body);
+  color: #bdb3d7;
+}
+.access-primary {
+  display: flex;
+  justify-content: center;
+  margin: 30px auto 0;
+}
+.access-primary .button {
+  min-width: 268px;
+  max-width: 100%;
+  min-height: 58px;
+}
+.access-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2px 25px;
+  margin-top: 22px;
+}
+.access-links > a,
+.access-links > .text-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  color: #c7b9e9;
+  font: 400 14px/1.4 var(--body);
+  text-underline-offset: 5px;
+}
+.access-links .icon {
+  width: 18px;
+  height: 18px;
+}
+.access-links > a:hover,
+.access-links > .text-button:hover {
+  color: #fff0dc;
+}
+.access-panel :is(button, a):focus-visible {
+  outline: 2px solid var(--mint);
+  outline-offset: 5px;
+}
+.access-panel .feedback {
+  text-align: left;
+  max-width: 580px;
+  margin: 24px auto 0;
+}
+.access-window .window-status {
+  font-size: 12px;
+}
+.player-setup-window .access-interior > .journey-task {
+  width: 100%;
+  max-width: 640px;
+}
+.player-setup-window .task-title {
+  font-size: 35px;
+  transform: none;
+  width: auto;
+}
+.player-setup-window .task-description {
+  font-size: 18px;
+}
+.player-setup-window .registration-choice {
+  border: 1px solid #68638e;
+  border-radius: 2px;
+  background: #101c38;
+}
+@media (max-height: 850px) and (min-width: 761px) {
+  .access-window .access-interior {
+    padding-top: 32px;
+    padding-bottom: 29px;
+  }
+  .access-title {
+    font-size: 42px;
+  }
+  .access-opening {
+    margin-top: 20px;
+  }
+  .access-countdown > div {
+    padding-block: 18px 15px;
+  }
+  .access-primary {
+    margin-top: 24px;
+  }
+  .access-links {
+    margin-top: 15px;
+  }
+}
+@media (max-width: 760px) {
+  .access-shell {
+    padding-inline: 18px;
+  }
+  .access-window .access-interior {
+    padding: 34px 19px 25px;
+    gap: 0;
+  }
+  .access-title {
+    font-size: 31px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    margin-bottom: 22px;
+  }
+  .access-wallet {
+    font-size: 14px;
+    gap: 3px 12px;
+    padding: 3px 9px;
+  }
+  .access-wallet-label {
+    font-size: 12px;
+  }
+  .access-opening {
+    font-size: 13px;
+    margin-top: 25px;
+    margin-bottom: 14px;
+    gap: 3px 9px;
+  }
+  .access-countdown {
+    gap: 9px;
+  }
+  .access-countdown > div {
+    padding: 17px 4px 14px;
+    gap: 10px;
+  }
+  .access-countdown strong {
+    font-size: 30px;
+    letter-spacing: 0;
+  }
+  .access-countdown span {
+    font-size: 10px;
+  }
+  .access-primary {
+    margin-top: 27px;
+  }
+  .access-primary .button {
+    min-width: 0;
+    width: 100%;
+    max-width: 320px;
+    font-size: 18px;
+  }
+  .access-links {
+    gap: 2px 19px;
+    margin-top: 18px;
+  }
+  .access-links > a,
+  .access-links > .text-button {
+    font-size: 12px;
+  }
+  .access-window .window-status {
+    font-size: 10px;
+  }
+  .player-setup-window .task-title {
+    font-size: 28px;
+  }
+  .player-setup-window .task-description {
+    font-size: 16px;
+  }
+}
+@media (max-width: 380px) {
+  .access-shell {
+    padding-inline: 12px;
+  }
+  .access-window .access-interior {
+    padding-inline: 12px;
+  }
+  .access-title {
+    font-size: 27px;
+  }
+  .access-countdown {
+    gap: 7px;
+  }
+  .access-countdown strong {
+    font-size: 27px;
+  }
+  .access-countdown span {
+    font-size: 9px;
+  }
+  .access-opening {
+    font-size: 12px;
+  }
+}
+
+/* Keep the saved invitation and its wallet together above the launch details. */
+.access-account {
+  display: flex;
+  justify-content: flex-end;
+  margin: -14px 0 16px;
+}
+.access-account .access-signout {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0 4px 12px;
+  min-height: 32px;
+  text-decoration: none;
+  font-size: 12px;
+  color: #bdb2df;
+}
+.access-signout .icon {
+  width: 15px;
+  height: 15px;
+}
+.access-account .access-signout:hover {
+  color: var(--cream);
+}
+.access-card-screen .access-interior {
+  padding-top: 24px;
+  padding-bottom: 28px;
+}
+.access-panel.has-card {
+  max-width: 690px;
+}
+.has-card .access-account {
+  margin: 0 0 7px;
+}
+.has-card .access-title {
+  max-width: none;
+  font-size: 28px;
+  line-height: 1.25;
+  margin-bottom: 18px;
+  letter-spacing: -0.4px;
+}
+.access-invitation {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+}
+.access-card-tools {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
+  margin: 9px 8px 0;
+}
+.access-card-tools .access-wallet {
+  display: block;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  text-align: left;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.access-card-tools .access-wallet-label {
+  display: block;
+  font-size: 11px;
+  margin-bottom: 3px;
+}
+.access-card-tools .access-wallet-address {
+  display: block;
+  overflow-wrap: anywhere;
+}
+.access-card-tools .access-card-download {
+  min-width: 0;
+  min-height: 38px;
+  padding: 7px 10px;
+  gap: 7px;
+  border-width: 2px;
+  font-size: 13px;
+  line-height: 1.3;
+}
+.access-card-download .icon {
+  width: 16px;
+  height: 16px;
+  flex-basis: 16px;
+}
+.has-card .access-launch {
+  max-width: 510px;
+  margin: 0 auto;
+}
+.has-card .access-opening {
+  margin: 22px 0 14px;
+  padding-top: 18px;
+  font-size: 14px;
+}
+.has-card .access-countdown {
+  gap: 12px;
+}
+.has-card .access-countdown > div {
+  padding: 14px 6px 12px;
+  gap: 8px;
+}
+.has-card .access-countdown strong {
+  font-size: 33px;
+}
+.has-card .access-countdown span {
+  font-size: 11px;
+}
+.has-card .access-primary {
+  margin-top: 20px;
+}
+@media (max-height: 850px) and (min-width: 761px) {
+  .access-card-screen .access-interior {
+    padding-top: 14px;
+    padding-bottom: 22px;
+  }
+  .has-card .access-title {
+    font-size: 26px;
+    margin-bottom: 12px;
+  }
+  .access-invitation {
+    max-width: 390px;
+  }
+  .has-card .access-opening {
+    margin-top: 17px;
+    padding-top: 14px;
+  }
+}
+@media (max-width: 760px) {
+  .access-card-screen .access-interior {
+    padding: 14px 14px 24px;
+  }
+  .has-card .access-account {
+    margin-bottom: 10px;
+  }
+  .access-account .access-signout {
+    font-size: 11px;
+    min-height: 36px;
+  }
+  .has-card .access-title {
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 17px;
+  }
+  .access-card-tools {
+    gap: 12px;
+    margin-inline: 3px;
+    align-items: start;
+  }
+  .access-card-tools .access-wallet {
+    font-size: 11px;
+    line-height: 1.55;
+  }
+  .access-card-tools .access-wallet-label {
+    font-size: 10px;
+  }
+  .access-card-tools .access-card-download {
+    min-height: 36px;
+    padding: 7px 8px;
+    font-size: 11px;
+    gap: 5px;
+  }
+  .access-card-tools .access-card-download .icon {
+    width: 14px;
+    height: 14px;
+    flex-basis: 14px;
+  }
+  .has-card .access-opening {
+    font-size: 12px;
+    margin-top: 22px;
+    padding-top: 18px;
+    gap: 4px 8px;
+  }
+  .has-card .access-countdown {
+    gap: 7px;
+  }
+  .has-card .access-countdown strong {
+    font-size: 27px;
+  }
+  .has-card .access-countdown span {
+    font-size: 9px;
+  }
+  .has-card .access-countdown > div {
+    padding: 14px 3px 12px;
+  }
+}
+
+/* Center the transient state while using the form's shared desktop chrome. */
+.loading-shell {
+  --loading-header: 161px;
+  min-height: calc(100svh - var(--loading-header));
+  margin-inline: auto;
+  justify-content: center;
+  padding-block: 24px calc(var(--loading-header) + 24px);
+}
+body:is([data-page="early"], [data-page="play"], [data-page="collab"], [data-page="docs"], [data-page="faq"], [data-page="partners"])
+  .loading-shell {
+  padding-bottom: calc(var(--loading-header) + 24px);
+}
+.loading-shell .access-window {
+  max-width: 680px;
+}
+.loading-shell .access-window.is-expanded {
+  max-width: 940px;
+}
+.loading-shell .access-interior {
+  padding: 60px 28px;
+}
+.loading-content {
+  width: 100%;
+  text-align: center;
+}
+.loading-content h2 {
+  margin: 0 0 14px;
+  color: var(--cream);
+  font: 700 30px/1.3 var(--display);
+  text-wrap: balance;
+}
+.loading-content p {
+  margin: 0;
+  color: #bdb3d7;
+  font: 400 15px/1.5 var(--body);
+}
+.loading-pixels {
+  display: flex;
+  justify-content: center;
+  gap: 11px;
+  margin-bottom: 30px;
+  height: 17px;
+  align-items: center;
+}
+.loading-pixels i {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: var(--mint);
+  box-shadow: 0 3px #148975;
+  animation: loading-pixel 1.2s ease-in-out infinite;
+}
+.loading-pixels i:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.loading-pixels i:nth-child(3) {
+  animation-delay: 0.3s;
+}
+@keyframes loading-pixel {
+  0%,
+  70%,
+  100% {
+    opacity: 0.35;
+    transform: translateY(0);
+  }
+  35% {
+    opacity: 1;
+    transform: translateY(-4px);
+  }
+}
+@media (min-width: 1600px) {
+  .loading-shell {
+    --loading-header: max(161px, calc(161px + (100svh - 1024px) * 0.25));
+  }
+}
+@media (max-height: 850px) and (min-width: 761px) {
+  .loading-shell {
+    --loading-header: 112px;
+  }
+}
+@media (max-height: 760px) and (min-width: 1100px) {
+  .loading-shell {
+    --loading-header: 88px;
+  }
+}
+@media (max-width: 760px) {
+  .loading-shell {
+    --loading-header: 110px;
+  }
+  .loading-shell .access-interior {
+    padding: 46px 20px;
+  }
+  .loading-content h2 {
+    font-size: 25px;
+  }
+  .loading-content p {
+    font-size: 13px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .loading-pixels i {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* Completed applications: keep the invitation beside a bounded referral list. */
+.access-card-screen .access-window {
+  max-width: 1160px;
+}
+.access-card-screen .access-window.is-expanded {
+  max-width: 1280px;
+}
+.access-card-screen .access-panel.has-card {
+  max-width: 1020px;
+}
+.access-dashboard {
+  display: grid;
+  grid-template-columns: minmax(0, 1.38fr) minmax(260px, 1fr);
+  gap: 38px;
+  margin: 30px auto 0;
+  text-align: left;
+  align-items: center;
+}
+.access-card-column {
+  min-width: 0;
+}
+.access-dashboard .access-invitation {
+  max-width: 520px;
+}
+.access-dashboard #invite-card {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.access-card-column .card-status:empty {
+  display: none;
+}
+.access-referral-link {
+  margin: 23px 8px 0;
+}
+.access-referral-link label {
+  display: block;
+  font: 400 14px/1.4 var(--body);
+  color: var(--cream);
+  margin-bottom: 10px;
+}
+.access-referral-link > div {
+  display: flex;
+  gap: 10px;
+}
+.access-referral-link input {
+  width: 100%;
+  min-width: 0;
+  height: 42px;
+  padding: 10px;
+  border: 1px solid #8076ad;
+  border-radius: 0;
+  background: #0c1832;
+  color: #efe8fa;
+  font: 400 12px/1.4 var(--body);
+  text-overflow: ellipsis;
+}
+.access-referral-link .button {
+  min-width: 0;
+  min-height: 42px;
+  padding: 8px 13px;
+  gap: 6px;
+  font-size: 14px;
+  border-width: 2px;
+}
+.access-referral-link .icon {
+  width: 17px;
+  height: 17px;
+  flex-basis: 17px;
+}
+.access-referrals {
+  border-left: 1px solid #6e639a80;
+  padding-left: 36px;
+  min-width: 0;
+}
+.access-referrals h3 {
+  font: 700 24px/1.3 var(--display);
+  color: var(--cream);
+  margin: 0 0 7px;
+}
+.referral-total {
+  display: block;
+  color: var(--mint);
+  font: 700 62px/1.15 var(--display);
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+.referral-caption {
+  color: #bdb2d8;
+  font: 400 12px/1.5 var(--body);
+  margin: 4px 0 20px;
+}
+.referral-list-space {
+  min-height: 216px;
+}
+.referral-wallets {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+.referral-wallets li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 8px 0 15px;
+  border: 1px solid #514e7a;
+  background: #101d3b;
+  box-shadow: inset 0 1px #ffffff05;
+}
+.referral-wallet {
+  font: 400 15px/1.4 var(--body);
+  font-variant-numeric: tabular-nums;
+  user-select: all;
+}
+.referral-copy,
+.referral-pagination button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 38px;
+  min-height: 38px;
+  padding: 8px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #cabee5;
+  cursor: pointer;
+}
+.referral-copy .icon,
+.referral-pagination .icon {
+  width: 19px;
+  height: 19px;
+}
+.referral-copy:hover,
+.referral-pagination button:not(:disabled):hover {
+  background: #262950;
+  border-color: #8c80b7;
+  color: var(--cream);
+}
+.referral-copy.is-copied {
+  color: var(--mint);
+}
+.copy-fallback .referral-wallet {
+  overflow-wrap: anywhere;
+  font-size: 11px;
+}
+.referral-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 216px;
+  margin: 0;
+  padding: 20px;
+  border: 1px dashed #514e7a;
+  color: #bdb2d8;
+  font: 400 14px/1.6 var(--body);
+  text-align: center;
+  text-wrap: balance;
+}
+.referral-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 14px;
+  color: #bdb2d8;
+  font: 400 12px/1.3 var(--body);
+}
+.referral-pagination > div {
+  display: flex;
+  gap: 8px;
+}
+.referral-pagination button {
+  border-color: #68608f;
+  background: #192141;
+}
+.referral-pagination button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+.referrals-feedback {
+  min-height: 18px;
+  margin: 8px 0 0;
+  color: var(--mint);
+  font: 400 11px/1.5 var(--body);
+}
+.access-referrals > .text-button {
+  font-size: 12px;
+  color: var(--cream);
+}
+.access-card-screen .has-card .access-launch {
+  max-width: none;
+  border-top: 1px solid #65618e80;
+  margin-top: 26px;
+}
+.access-card-screen .has-card .access-opening {
+  border: 0;
+  margin-top: 0;
+  padding-top: 19px;
+}
+.access-card-screen .access-countdown {
+  max-width: 510px;
+}
+@media (max-width: 900px) {
+  .access-dashboard {
+    gap: 25px;
+    grid-template-columns: minmax(0, 1.25fr) minmax(230px, 1fr);
+  }
+  .access-referrals {
+    padding-left: 23px;
+  }
+  .access-referrals h3 {
+    font-size: 21px;
+  }
+}
+@media (max-width: 760px) {
+  .access-dashboard {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 27px;
+    margin-top: 22px;
+  }
+  .access-card-column {
+    width: 100%;
+    max-width: 520px;
+    margin: auto;
+  }
+  .access-referrals {
+    border-left: 0;
+    border-top: 1px solid #6e639a80;
+    padding: 24px 0 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 520px;
+  }
+  .access-referrals h3 {
+    font-size: 23px;
+  }
+  .referral-total {
+    font-size: 52px;
+  }
+  .referral-caption {
+    margin-bottom: 17px;
+  }
+  .referral-copy,
+  .referral-pagination button {
+    width: 44px;
+    min-height: 44px;
+  }
+  .referral-wallets li {
+    min-height: 52px;
+  }
+  .referral-list-space {
+    min-height: 232px;
+  }
+  .access-referral-link {
+    margin: 20px 3px 0;
+  }
+  .access-referral-link input {
+    font-size: 11px;
+  }
+  .access-referral-link .button {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+  .access-card-screen .has-card .access-launch {
+    margin-top: 20px;
+  }
+}
+
+/* A clear next step while the game is waiting for its opening date. */
+.access-apply {
+  max-width: 580px;
+  margin: 30px auto 0;
+  padding: 23px 20px 24px;
+  border: 1px solid #706496;
+  background: linear-gradient(135deg, #1f2b4e, #17213f);
+  box-shadow: inset 0 1px #a899d326;
+  text-align: center;
+}
+.access-apply p {
+  margin: 0 0 18px;
+  color: #d7cce9;
+  font: 400 15px/1.5 var(--body);
+  text-wrap: balance;
+}
+.access-apply .button {
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 360px;
+  min-height: 58px;
+  padding: 14px 20px;
+  gap: 16px;
+  font: 700 23px/1.25 var(--display);
+  white-space: nowrap;
+}
+.access-apply .icon {
+  flex: 0 0 23px;
+  width: 23px;
+  height: 23px;
+}
+@media (max-width: 760px) {
+  .access-apply {
+    margin-top: 25px;
+    padding: 20px 12px;
+  }
+  .access-apply p {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+  .access-apply .button {
+    font-size: 19px;
+    min-height: 55px;
+    gap: 10px;
+    padding: 13px 10px;
+  }
+  .access-apply .icon {
+    width: 20px;
+    height: 20px;
+    flex-basis: 20px;
+  }
+}
+
+/* Play before opening and the closed Early Access page (launch-view.mjs): both openings, each with its own countdown. */
+.launch-screen .access-window {
+  max-width: 1010px;
+}
+.launch-screen .access-window.is-expanded {
+  max-width: 1160px;
+}
+.launch-screen .access-interior {
+  padding: 30px 36px 26px;
+}
+.launch-panel {
+  width: 100%;
+  max-width: 880px;
+  text-align: center;
+}
+.launch-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 14px;
+  padding: 7px 13px;
+  border: 1px solid #7a6aa8;
+  background: #1a1838;
+  color: var(--blush);
+  font: 400 12px/1.2 var(--display);
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+.launch-kicker .icon {
+  width: 15px;
+  height: 15px;
+  stroke-width: 2.2;
+}
+.launch-title {
+  margin: 0 auto 22px;
+  color: var(--cream);
+  font: 700 40px/1.15 var(--display);
+  letter-spacing: -0.6px;
+  text-wrap: balance;
+}
+.launch-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  text-align: left;
+}
+.launch-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+  padding: 16px 16px 14px;
+  background: #0b1734;
+  border: 2px solid #4c4880;
+  box-shadow: inset 0 3px #060f26, 0 4px #050c22;
+}
+.launch-card[data-state="next"] {
+  border-color: var(--mint);
+  box-shadow: inset 0 3px #060f26, 0 4px #0a3f3d, 0 0 28px #44f2c01c;
+}
+.launch-card:is([data-state="live"], [data-state="opening"]) {
+  border-color: var(--mint);
+  background: #0b1f33;
+}
+.launch-card header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+.launch-card header > div {
+  min-width: 0;
+}
+.launch-number {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  flex: none;
+  background: #1a2550;
+  border: 1px solid #6e68a0;
+  color: var(--lilac);
+  font: 700 14px/1 var(--display);
+}
+.launch-card:is([data-state="next"], [data-state="live"], [data-state="opening"])
+  .launch-number {
+  background: var(--mint);
+  border-color: #91ffdd;
+  color: #0d2c35;
+}
+.launch-card h3 {
+  margin: 0;
+  color: var(--cream);
+  font: 700 19px/1.2 var(--display);
+}
+.launch-card header p {
+  margin: 4px 0 0;
+  color: #aea6d1;
+  font: 400 12px/1.3 var(--display);
+}
+.launch-tag {
+  margin-left: auto;
+  flex: none;
+  padding: 5px 8px;
+  border: 1px solid #6e68a0;
+  color: #bdb3d7;
+  font: 400 11px/1 var(--display);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.launch-card[data-state="next"] .launch-tag {
+  border-color: var(--mint);
+  color: var(--mint);
+}
+.launch-card:is([data-state="live"], [data-state="opening"]) .launch-tag {
+  background: var(--mint);
+  border-color: var(--mint);
+  color: #0d2c35;
+}
+.launch-card .launch-timer {
+  gap: 8px;
+}
+.launch-card .launch-timer > div {
+  padding: 14px 2px 11px;
+  gap: 8px;
+}
+.launch-card .launch-timer strong {
+  font-size: 36px;
+}
+.launch-card .launch-timer span {
+  font-size: 10px;
+}
+.launch-card[data-state="later"] .launch-timer strong {
+  color: #d8cff2;
+}
+.launch-card[data-state="next"] .launch-timer strong {
+  color: #ffd182;
+}
+.launch-apply {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 16px;
+  margin: 0 0 16px;
+  padding: 12px 14px;
+  text-align: left;
+  background: linear-gradient(90deg, #3b2a24, #1c2148 70%);
+  border: 2px solid #ffd182;
+  box-shadow: 0 3px #070e27, 0 0 22px #ffd18222;
+}
+.launch-apply-copy h3 {
+  margin: 0;
+  color: #ffe2a8;
+  font: 700 15px/1.3 var(--display);
+}
+.launch-apply-copy p {
+  margin: 4px 0 0;
+  color: #d9cdea;
+  font: 400 12px/1.3 var(--display);
+}
+.launch-timer.is-compact {
+  gap: 6px;
+}
+.launch-timer.is-compact > div {
+  min-width: 48px;
+  padding: 7px 4px 6px;
+  gap: 4px;
+}
+.launch-timer.is-compact strong {
+  font-size: 21px;
+  color: #ffd182;
+}
+.launch-timer.is-compact span {
+  font-size: 8px;
+}
+.journey-shell .launch-apply-cta {
+  min-height: 50px;
+  padding: 10px 16px;
+  gap: 10px;
+  font: 700 16px/1.2 var(--display);
+  white-space: nowrap;
+}
+.journey-shell .launch-apply-cta .icon {
+  width: 20px;
+  height: 20px;
+  flex-basis: 20px;
+}
+.launch-live {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 82px;
+  background: #09152f;
+  border: 1px solid #2c8a7a;
+  color: var(--mint);
+  font: 700 24px/1 var(--display);
+}
+.launch-live .launch-dot {
+  width: 12px;
+  height: 12px;
+}
+.journey-shell .launch-enter {
+  width: 100%;
+  min-height: 52px;
+  font: 700 18px/1.2 var(--display);
+}
+.launch-date {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+  padding-top: 11px;
+  border-top: 1px dashed #4c4880;
+}
+.launch-date time {
+  color: #fff0df;
+  font: 400 15px/1.3 var(--display);
+}
+.launch-date span {
+  color: #9f98c6;
+  font: 400 12px/1.3 var(--display);
+}
+.launch-listed {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: -4px 0 0;
+  color: var(--mint);
+  font: 400 13px/1.3 var(--display);
+}
+.launch-listed .icon {
+  width: 16px;
+  height: 16px;
+  stroke-width: 3;
+}
+.launch-how {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 16px auto 0;
+  max-width: 820px;
+  color: #c7bfdf;
+  font: 400 14px/1.5 var(--display);
+  text-wrap: balance;
+}
+.launch-how .icon {
+  width: 20px;
+  height: 20px;
+  color: var(--mint);
+}
+.launch-ca {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 16px 0 0;
+  padding: 13px 14px;
+  text-align: left;
+  background: linear-gradient(90deg, #2b1f4b, #14203f);
+  border: 1px solid #8a6fb6;
+  box-shadow: 0 3px #070e27;
+}
+.launch-ca-badge {
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  flex: none;
+  background: #ffd182;
+  color: #1a1636;
+  font: 700 18px/1 var(--display);
+  letter-spacing: 1px;
+  box-shadow: inset 0 -4px #c48b45, 0 3px #120c26;
+}
+.launch-ca-copy {
+  min-width: 0;
+}
+.launch-ca strong {
+  display: block;
+  color: var(--cream);
+  font: 700 16px/1.3 var(--display);
+}
+.launch-ca p {
+  margin: 4px 0 0;
+  color: #c7bfdf;
+  font: 400 13px/1.45 var(--display);
+}
+.launch-x {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  flex: none;
+  margin-left: auto;
+  min-height: 44px;
+  padding: 9px 14px;
+  border: 2px solid #fff7e2;
+  background: #ffecd5;
+  color: #101d3c;
+  text-decoration: none;
+  font: 700 14px/1 var(--display);
+  white-space: nowrap;
+  box-shadow: -3px 0 #d1b7d7, 0 3px #bda3c4;
+}
+.launch-x:hover {
+  background: #fff6e6;
+}
+.launch-x .icon {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2.2;
+}
+.launch-links {
+  margin-top: 12px;
+}
+.launch-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-basis: 100%;
+  margin: 0;
+  color: #e8bed0;
+  font: 400 13px/1.45 var(--display);
+}
+.launch-status .icon {
+  width: 15px;
+  height: 15px;
+}
+.launch-panel .feedback {
+  margin-top: 16px;
+}
+@media (max-height: 920px) and (min-width: 761px) {
+  .launch-screen .access-interior {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+  .launch-apply {
+    margin-bottom: 12px;
+    padding: 9px 12px;
+  }
+  .launch-title {
+    font-size: 34px;
+    margin-bottom: 16px;
+  }
+  .launch-kicker {
+    margin-bottom: 11px;
+  }
+  .launch-card {
+    gap: 11px;
+    padding: 13px 14px 12px;
+  }
+  .launch-card .launch-timer > div {
+    padding: 11px 2px 9px;
+  }
+  .launch-card .launch-timer strong {
+    font-size: 32px;
+  }
+  .launch-live {
+    min-height: 70px;
+  }
+  .launch-how {
+    margin-top: 13px;
+  }
+  .launch-ca {
+    margin-top: 12px;
+    padding: 10px 12px;
+  }
+  .launch-ca-badge {
+    width: 44px;
+    height: 44px;
+    font-size: 16px;
+  }
+  .launch-links {
+    margin-top: 6px;
+  }
+}
+@media (max-width: 860px) {
+  .launch-cards {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+  .launch-apply {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 11px;
+  }
+  .launch-apply .launch-timer {
+    max-width: 340px;
+  }
+  .journey-shell .launch-apply-cta {
+    width: 100%;
+  }
+}
+@media (max-width: 760px) {
+  .launch-screen .access-interior {
+    padding: 24px 14px 20px;
+  }
+  .launch-title {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+  .launch-kicker {
+    font-size: 10px;
+    padding: 6px 10px;
+    gap: 7px;
+  }
+  .launch-card {
+    padding: 13px 12px 12px;
+    gap: 12px;
+  }
+  .launch-card h3 {
+    font-size: 17px;
+  }
+  .launch-card .launch-timer {
+    gap: 6px;
+  }
+  .launch-card .launch-timer strong {
+    font-size: clamp(24px, 7.6vw, 32px);
+  }
+  .launch-card .launch-timer span {
+    font-size: 9px;
+  }
+  .launch-date time {
+    font-size: 13px;
+  }
+  .launch-date span {
+    font-size: 11px;
+  }
+  .launch-how {
+    font-size: 12px;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .launch-ca {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .launch-ca-badge {
+    width: 42px;
+    height: 42px;
+    font-size: 15px;
+  }
+  .launch-ca-copy {
+    flex: 1 1 200px;
+  }
+  .launch-ca strong {
+    font-size: 14px;
+  }
+  .launch-ca p {
+    font-size: 12px;
+  }
+  .launch-x {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+  }
+}

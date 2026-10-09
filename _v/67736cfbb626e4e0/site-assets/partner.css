@@ -1,0 +1,1170 @@
+/* Collab (/collab): DAO applications and wallets, in the same desktop window as Creators and Early Access. */
+
+/* Left column: the collab pool, the NFT facts, what was applied for and who is signed in. */
+.partner-aside {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.partner-heading {
+  margin: 0 0 18px;
+  color: #fff8e8;
+  font: 700 40px/1.1 var(--display);
+  letter-spacing: -1px;
+}
+.partner-aside .collab-profile {
+  margin-top: auto;
+}
+.partner-help {
+  margin: 8px 0 0;
+  color: #b4b9d7;
+  font: 400 14px/1.55 var(--body);
+}
+.partner-help a {
+  color: var(--mint);
+}
+.partner-help a:hover {
+  text-decoration: underline;
+}
+.partner-template {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 18px;
+  padding: 12px 12px 12px 14px;
+  overflow: hidden;
+  border: 1px solid var(--mint);
+  background: linear-gradient(135deg, #14473f, #0b1734 75%);
+  color: #fff8e8;
+  text-decoration: none;
+  box-shadow: 0 0 22px #57f2c733;
+}
+.partner-template:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 35%,
+    #ffffff30 50%,
+    transparent 65%
+  );
+  transform: translateX(-100%);
+  animation: partner-shimmer 3s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes partner-shimmer {
+  55%,
+  100% {
+    transform: translateX(100%);
+  }
+}
+.partner-template-icon {
+  display: grid;
+  flex: 0 0 36px;
+  place-items: center;
+  height: 36px;
+  background: #103a37;
+  color: var(--mint);
+}
+.partner-template-text {
+  min-width: 0;
+}
+.partner-template strong {
+  display: block;
+  font: 700 18px/1.2 var(--display);
+}
+.partner-template small {
+  display: block;
+  margin-top: 3px;
+  color: #cfe3e0;
+  font: 400 13px/1.4 var(--body);
+}
+.partner-template-go {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  padding: 8px 12px;
+  background: #ffecd5;
+  color: #1b1530;
+  font: 600 14px/1 var(--body);
+}
+.partner-template:hover {
+  border-color: #a6ffe6;
+}
+.partner-template:hover .partner-template-go {
+  background: #fff6ea;
+}
+.partner-template:focus-visible {
+  outline: 2px solid #dfcef3;
+  outline-offset: 3px;
+}
+.partner-pool .collab-supply-head {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+}
+.partner-pool .collab-supply-label {
+  font-size: 13px;
+  line-height: 1.2;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.partner-pool .collab-supply-count strong {
+  font-size: 32px;
+}
+.partner-pool .collab-supply-left {
+  margin-top: 8px;
+  font-size: 12px;
+}
+.partner-applied {
+  margin: 8px 0 18px;
+}
+.partner-applied h3 {
+  margin: 0 0 9px;
+  color: #bdb3d7;
+  font: 400 13px/1.2 var(--body);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.partner-applied ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.partner-applied li {
+  max-width: 100%;
+  overflow: hidden;
+  padding: 6px 13px;
+  border: 1px solid #65618e;
+  background: #09152f;
+  color: #fff3df;
+  font: 400 15px/1.3 var(--body);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* The right column: the steps on top, then one task at a time. */
+.collab-member.partner-shell .journey-right {
+  justify-content: flex-start;
+  padding-top: 20px;
+}
+.journey-task.partner-task {
+  flex: 0 0 auto;
+}
+.journey-task.partner-task .task-title {
+  margin-bottom: 12px;
+  font-size: 38px;
+}
+.journey-task.partner-task .task-title small {
+  color: #b4b9d7;
+  font: 400 16px/1 var(--body);
+}
+.journey-task.partner-task .partner-workspace .task-title {
+  font-size: 30px;
+}
+/* The app focuses the new heading for screen readers; it is not a control, so it gets no outline. */
+.partner-task h2[tabindex="-1"]:focus {
+  outline: none;
+}
+
+/* Steps: the Early Access progress with three steps; a declined review is marked in red. */
+.partner-progress {
+  margin-bottom: 12px;
+}
+.partner-progress .step-circle {
+  width: 34px;
+  height: 34px;
+  font-size: 19px;
+}
+.partner-progress .step-circle .icon {
+  width: 20px;
+  height: 20px;
+}
+.partner-progress ol:before,
+.partner-progress li.is-done:not(:last-child):after {
+  top: 15px;
+}
+.partner-progress .journey-meter {
+  margin-top: 14px;
+}
+.partner-progress ol {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.partner-progress ol:before {
+  left: 16.67%;
+  right: 16.67%;
+}
+.partner-progress .journey-step {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: #b9ace5;
+  font: 400 16px/1.3 var(--body);
+}
+.partner-progress .is-done .journey-step {
+  color: #fff3ec;
+}
+.partner-progress .is-current .journey-step {
+  color: #fff3df;
+  font-weight: 700;
+}
+.partner-progress .is-declined .step-circle {
+  background: #3a1b2b;
+  border-color: #ff9d8a;
+  color: #ffc3b5;
+}
+.partner-progress .is-declined .journey-step {
+  color: #ffc3b5;
+  font-weight: 700;
+}
+/* Once approved, the meter's place holds the 72-hour countdown and Submit, then "submitted". It stays one line
+   and the steps above it get a little smaller, so the wallet screen keeps the height it had with the meter. */
+.partner-deadline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+  margin: 0 0 10px;
+  padding: 3px 3px 3px 10px;
+  border: 1px solid #6b70a8;
+  background: #0b1734;
+  color: #e9e3f3;
+  font: 400 13px/1.3 var(--body);
+}
+.partner-deadline:not(#partner-deadline) {
+  padding: 7px 10px;
+}
+.partner-deadline > .icon,
+.partner-deadline-time .icon {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+}
+.partner-deadline-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #ffd182;
+  white-space: nowrap;
+}
+.partner-deadline-time strong {
+  color: #fff3df;
+  font: 700 18px/1 var(--display);
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+}
+.partner-deadline-fill {
+  color: #b4b9d7;
+  white-space: nowrap;
+}
+.partner-deadline .partner-submit {
+  margin-left: auto;
+  min-height: 30px;
+  padding: 3px 12px;
+  gap: 6px;
+  border-width: 2px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.partner-deadline .partner-submit .icon {
+  width: 14px;
+  height: 14px;
+}
+.partner-deadline.is-urgent {
+  border-color: #ff9d8a;
+  background: #3a1b2b;
+}
+.partner-deadline.is-urgent .partner-deadline-time {
+  color: #ffc3b5;
+}
+.partner-deadline.is-done {
+  border-color: #5fd4b0;
+  background: #103a37;
+  color: var(--mint);
+}
+.partner-deadline.is-done strong {
+  color: #fff3df;
+  font-weight: 700;
+}
+.partner-deadline.is-paused {
+  color: #ffd182;
+}
+.partner-deadline.is-done .partner-deadline-fill,
+.partner-deadline.is-paused .partner-deadline-fill {
+  margin-left: auto;
+}
+.collab-member.partner-shell .journey-right:has(.partner-deadline) {
+  padding-top: 10px;
+}
+.journey-right:has(.partner-deadline) .partner-progress {
+  margin-bottom: 10px;
+}
+.journey-right:has(.partner-deadline) .partner-progress .step-circle {
+  width: 28px;
+  height: 28px;
+  font-size: 16px;
+}
+.journey-right:has(.partner-deadline) .partner-progress .step-circle .icon {
+  width: 17px;
+  height: 17px;
+}
+.journey-right:has(.partner-deadline) .partner-progress .journey-step {
+  gap: 5px;
+}
+.journey-right:has(.partner-deadline) .partner-progress ol:before,
+.journey-right:has(.partner-deadline)
+  .partner-progress
+  li.is-done:not(:last-child):after {
+  top: 12px;
+}
+.partner-progress .is-declined ~ li {
+  opacity: 0.45;
+}
+
+/* Application form */
+.partner-form textarea,
+.partner-paste textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 10px 14px;
+  border: 1px solid #8b86c0;
+  border-radius: 2px;
+  background: #0b1734;
+  color: #fff5ec;
+  font: 400 16px/1.55 var(--body);
+  resize: vertical;
+  box-shadow: inset 0 0 0 1px #343362;
+  transition: border-color 0.2s;
+}
+.partner-form textarea::placeholder,
+.partner-paste textarea::placeholder {
+  color: #a6aecf;
+  opacity: 1;
+}
+.partner-form textarea:focus,
+.partner-paste textarea:focus {
+  outline: 2px solid #dfcef3;
+  outline-offset: 3px;
+}
+.journey-shell .partner-form label:not(.partner-option),
+.partner-choice legend {
+  display: block;
+  margin: 16px 0 8px;
+  padding: 0;
+  color: #fff3df;
+  font: 400 17px/1.4 var(--body);
+}
+.journey-shell .partner-form-main > label:first-child {
+  margin-top: 0;
+}
+.journey-shell .partner-form label small {
+  margin-left: 8px;
+  color: #b4b9d7;
+  font-size: 14px;
+}
+.journey-task.partner-task .partner-form .task-title {
+  margin-bottom: 16px;
+  font-size: 34px;
+}
+.partner-label-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 16px 0 8px;
+}
+.journey-shell .partner-form .partner-label-row label {
+  margin: 0;
+}
+.partner-count {
+  color: #b4b9d7;
+  font: 400 14px/1.4 var(--body);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+/* Applying: one wide window; the long answers on the left, the short questions and the account on the right. */
+.partner-apply-shell .access-window {
+  max-width: 1120px;
+}
+.partner-apply-shell .access-interior {
+  padding-top: 34px;
+  padding-bottom: 30px;
+}
+.partner-apply {
+  width: 100%;
+  max-width: 1000px;
+}
+.partner-apply .partner-progress {
+  max-width: 560px;
+  margin: 0 auto 14px;
+}
+.partner-form-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 20px;
+  margin: 0 0 14px;
+}
+.journey-task.partner-task .partner-form-head .task-title {
+  flex: 0 1 auto;
+  width: auto;
+  margin: 0;
+}
+.partner-account {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 0;
+  color: #b4b9d7;
+  font: 400 15px/1.4 var(--body);
+}
+.partner-account strong {
+  color: #fff3df;
+  font-weight: 400;
+}
+.partner-form-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 0 36px;
+}
+/* The send button sits at the foot of the short questions, level with the bottom of the description box. */
+.partner-form-side {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.partner-form-side .feedback {
+  margin: 16px 0 0;
+}
+.partner-form-side .task-navigation {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 0;
+}
+.partner-form-side .task-navigation .button {
+  width: 100%;
+}
+/* A legend ignores its own top margin inside a fieldset, so the gap between the two questions sits on the fieldset. */
+.journey-shell .partner-form-side .partner-choice legend {
+  margin-top: 0;
+}
+.partner-form-side .partner-choice + .partner-choice {
+  margin-top: 22px;
+}
+.partner-choice .partner-help {
+  margin: 8px 0 0;
+  font-size: 14px;
+}
+.partner-form .task-navigation .button {
+  min-height: 56px;
+}
+.partner-choice {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+.partner-choice > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.journey-shell label.partner-option {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  cursor: pointer;
+}
+.journey-shell .partner-option input[type="radio"] {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  opacity: 0;
+  cursor: pointer;
+  box-shadow: none;
+}
+.partner-option span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 96px;
+  justify-content: center;
+  padding: 8px 18px;
+  border: 1px solid #65618e;
+  background: #0b1734;
+  color: #e9e3f3;
+  font: 400 16px/1.2 var(--body);
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.partner-option span::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border: 2px solid #8b86c0;
+  border-radius: 50%;
+}
+.partner-option:hover span {
+  border-color: #b9b4e6;
+}
+.partner-option input:checked + span {
+  border-color: var(--mint);
+  background: #103a37;
+  color: #fff;
+}
+.partner-option input:checked + span::before {
+  border-color: var(--mint);
+  background: var(--mint);
+  box-shadow: inset 0 0 0 2px #103a37;
+}
+.partner-option input:focus-visible + span {
+  outline: 2px solid #dfcef3;
+  outline-offset: 3px;
+}
+/* "Yes" opens the post link field and "Discord" the username field, each under its own question. */
+.partner-discord,
+.partner-post-link {
+  margin-top: 10px;
+}
+.journey-shell .partner-form input[name="partner_discord"],
+.journey-shell .partner-form input[name="partner_post_url"] {
+  min-height: 44px;
+  padding: 8px 14px;
+  font-size: 16px;
+}
+
+/* Under review, not approved and closed */
+.partner-status {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.partner-pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 14px;
+  padding: 7px 14px;
+  overflow: hidden;
+  border: 1px solid currentColor;
+  font: 400 13px/1.2 var(--body);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+/* Under review: a lit badge with the Early Access button's calm shimmer. */
+.partner-pill.is-pending {
+  padding: 9px 18px;
+  border: 2px solid #c9b8ff;
+  background: #2b2763;
+  color: #f3edff;
+  font-size: 15px;
+  box-shadow: 0 0 18px #a98cff4d;
+}
+.partner-pill.is-pending:before {
+  content: "";
+  flex: 0 0 9px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #c9b8ff;
+  box-shadow: 0 0 10px #c9b8ff;
+}
+.partner-pill.is-pending:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    110deg,
+    transparent 30%,
+    #ffffff8c 49%,
+    transparent 68%
+  );
+  background-size: 300% 100%;
+  background-position: 150% 0;
+  opacity: 0;
+  animation: action-shimmer 3s ease-in-out infinite;
+}
+.partner-pill.is-declined {
+  border-color: #ff9d8a;
+  background: #3a1b2b;
+  color: #ffc3b5;
+}
+.partner-pill.is-closed {
+  color: #b4b9d7;
+}
+.partner-pill.is-expired {
+  border-color: #ff9d8a;
+  background: #3a1b2b;
+  color: #ffc3b5;
+}
+.partner-status .task-description a {
+  color: var(--mint);
+}
+.partner-status .task-description {
+  margin: 0 0 20px;
+}
+.journey-shell .partner-x {
+  min-height: 48px;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+/* Approved: groups on the left; on the right the group's name and GTD / FCFS tabs, then one panel at one height
+   that holds either the saved wallets (seven at a time) or a large paste box. */
+.partner-groups {
+  display: grid;
+  gap: 6px;
+  margin: 0 0 18px;
+}
+.partner-groups button {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #3e4677;
+  background: #0b1734;
+  color: #e9e3f3;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.partner-groups button:hover {
+  border-color: #8b86c0;
+}
+.partner-groups button[aria-current="true"] {
+  border-color: var(--mint);
+  background: #103a37;
+}
+.partner-groups button:focus-visible {
+  outline: 2px solid #dfcef3;
+  outline-offset: 3px;
+}
+.partner-group-icon {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 28px;
+  border: 1px solid #65618e;
+  color: #fff3df;
+  font: 400 10px/1 var(--body);
+  letter-spacing: 0.04em;
+}
+.partner-group-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.partner-group-text strong {
+  overflow: hidden;
+  color: #fff3df;
+  font: 700 15px/1.3 var(--display);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.partner-group-text small {
+  color: #b4b9d7;
+  font: 400 12px/1.3 var(--body);
+}
+.partner-group-fill {
+  color: #ffd182;
+  font: 400 13px/1 var(--body);
+  font-variant-numeric: tabular-nums;
+}
+.partner-group-fill.is-done {
+  color: var(--mint);
+}
+/* The group's name and its GTD / FCFS tabs share one line; a long name ends in an ellipsis (its full name is the tooltip). */
+.partner-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 0 0 12px;
+}
+.journey-task.partner-task .partner-title-row .task-title {
+  flex: 1 1 auto;
+  width: auto;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.partner-tiers {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 6px;
+}
+.partner-tiers button {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 7px;
+  padding: 7px 12px;
+  border: 1px solid #65618e;
+  background: #0b1734;
+  color: #e9e3f3;
+  font: 400 15px/1.2 var(--body);
+  cursor: pointer;
+}
+.partner-tiers button small {
+  color: #b4b9d7;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+.partner-tiers button[aria-pressed="true"] {
+  border-color: var(--mint);
+  background: #103a37;
+  color: #fff;
+}
+.partner-tiers button[aria-pressed="true"] small {
+  color: var(--mint);
+}
+.partner-tiers button:focus-visible {
+  outline: 2px solid #dfcef3;
+  outline-offset: 3px;
+}
+.partner-panel {
+  display: flex;
+  flex-direction: column;
+  height: calc(8 * 34px + 7 * 5px + 52px);
+}
+.partner-wallets {
+  display: grid;
+  align-content: start;
+  gap: 5px;
+  flex: 1;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  list-style: none;
+}
+.partner-wallets li {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 10px;
+  min-height: 34px;
+  padding: 3px 10px 3px 12px;
+  border: 1px solid #3e4677;
+  background: #0b1734;
+}
+.partner-slot {
+  color: #fff0d9;
+  font: 400 13px/1 var(--body);
+  font-variant-numeric: tabular-nums;
+}
+.partner-who {
+  overflow: hidden;
+  color: #fff0d9;
+  font: 400 14px/1.4 var(--body);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.partner-who.is-missing {
+  color: #ffb8a8;
+}
+.partner-wallets code {
+  min-width: 0;
+  overflow: hidden;
+  color: #e9e3f3;
+  font: 13px/1.5 ui-monospace, Consolas, monospace;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  user-select: all;
+}
+.partner-wallets button {
+  padding: 4px 10px;
+  border: 1px solid #6b70a8;
+  background: #132447;
+  color: #ffb8a8;
+  font: 400 12px/1 var(--body);
+  cursor: pointer;
+}
+.partner-wallets button:hover {
+  background: #1b3060;
+}
+.partner-wallets button:focus-visible {
+  outline: 2px solid #dfcef3;
+  outline-offset: 3px;
+}
+.partner-loading,
+.partner-empty {
+  display: grid;
+  place-items: center;
+  flex: 1;
+  margin: 0;
+  padding: 16px;
+  border: 1px dashed #5b5f93;
+  color: #b4b9d7;
+  font: 400 14px/1.5 var(--body);
+  text-align: center;
+}
+.partner-panel-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 14px;
+  margin-top: auto;
+  padding-top: 10px;
+}
+.partner-pager {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 30px;
+}
+.partner-pager .collab-range {
+  font-size: 13px;
+}
+.journey-shell .partner-open-add {
+  min-height: 40px;
+  padding: 6px 18px;
+  font-size: 17px;
+}
+.partner-full,
+.partner-notice,
+.partner-locked {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font: 400 14px/1.4 var(--body);
+}
+.partner-full,
+.partner-notice {
+  color: var(--mint);
+}
+.partner-locked {
+  color: #ffd182;
+}
+.partner-full .icon,
+.partner-notice .icon,
+.partner-locked .icon {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+}
+/* Submitting is confirmed in the panel's place, so the window keeps its height. */
+.partner-confirm-lead {
+  margin: 0 0 12px;
+  color: #fff3df;
+  font: 400 16px/1.45 var(--body);
+}
+.partner-confirm-lead strong {
+  color: var(--mint);
+}
+.partner-confirm-groups {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 0;
+  margin: 0;
+  padding: 0 4px 0 0;
+  overflow: auto;
+  list-style: none;
+}
+.partner-confirm-groups li {
+  flex: 0 0 auto;
+  display: grid;
+  gap: 5px;
+}
+.journey-shell .partner-confirm .partner-confirm-groups label {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin: 0;
+  color: #fff3df;
+  font: 700 15px/1.3 var(--body);
+}
+.partner-confirm-groups label span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.partner-confirm-groups label small {
+  flex: 0 0 auto;
+  color: #b4b9d7;
+  font: 400 13px/1.3 var(--body);
+}
+.journey-shell .partner-confirm .partner-confirm-groups input {
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+  padding: 7px 12px;
+  border: 1px solid #6b70a8;
+  background: #09152f;
+  color: #fff3df;
+  font: 400 15px/1.3 var(--body);
+}
+.journey-shell .partner-confirm-groups input::placeholder {
+  color: #8f94bd;
+}
+.journey-shell .partner-confirm .partner-confirm-groups input:focus {
+  outline: 2px solid #dfcef3;
+  outline-offset: 1px;
+}
+.partner-confirm-note {
+  margin: 10px 0 0;
+  color: #b4b9d7;
+  font: 400 13px/1.45 var(--body);
+}
+.partner-confirm .feedback {
+  margin: 8px 0 0;
+  padding: 8px 12px;
+}
+.partner-paste-title {
+  color: #fff3df;
+  font: 400 17px/1.4 var(--body);
+}
+.partner-row-labels,
+.partner-rows li {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 2fr) minmax(0, 3fr);
+  align-items: center;
+  gap: 8px;
+}
+.partner-row-labels {
+  margin: 0 0 6px;
+  color: #b4b9d7;
+  font: 400 13px/1.2 var(--body);
+}
+.partner-rows {
+  display: grid;
+  align-content: start;
+  gap: 6px;
+  flex: 1;
+  min-height: 0;
+  margin: 0;
+  padding: 3px 3px 3px 0;
+  overflow: auto;
+  list-style: none;
+}
+.journey-shell .partner-rows li input {
+  min-height: 0;
+  height: 36px;
+  padding: 0 10px;
+  font: 400 15px/1 var(--body);
+}
+.journey-shell .partner-rows li input[name="partner_row_wallet"] {
+  font: 13px/1 ui-monospace, Consolas, monospace;
+}
+.journey-shell .partner-rows li input:focus {
+  outline-offset: 1px;
+}
+.partner-row-tip {
+  margin: 6px 0 0;
+  color: #b4b9d7;
+  font: 400 12px/1.4 var(--body);
+}
+.partner-paste-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 14px;
+  margin: 0 0 8px;
+}
+.journey-shell .partner-paste label {
+  margin: 0;
+  color: #fff3df;
+  font: 400 17px/1.4 var(--body);
+}
+.partner-left {
+  color: #b4b9d7;
+  font: 400 14px/1.4 var(--body);
+}
+.partner-paste textarea {
+  flex: 1;
+  min-height: 0;
+  resize: none;
+  font: 13px/1.6 ui-monospace, Consolas, monospace;
+}
+.journey-shell .partner-paste .partner-panel-foot .button {
+  min-height: 46px;
+  padding: 8px 18px;
+  font-size: 19px;
+}
+.partner-workspace .feedback {
+  margin: 10px 0 0;
+}
+
+@media (max-width: 1250px) and (min-width: 761px) {
+  .partner-progress .journey-step {
+    font-size: 15px;
+  }
+}
+@media (max-width: 1000px) and (min-width: 761px) {
+  .partner-heading {
+    font-size: 32px;
+  }
+  .journey-task.partner-task .task-title {
+    font-size: 30px;
+  }
+  .partner-progress .journey-step {
+    font-size: 14px;
+  }
+}
+/* Mid-height screens: slightly shorter wallet rows keep the window no taller than the Creators one. */
+@media (max-height: 960px) and (min-height: 851px) and (min-width: 761px) {
+  .partner-panel {
+    height: calc(8 * 31px + 7 * 4px + 52px);
+  }
+  .partner-wallets {
+    gap: 4px;
+  }
+  .partner-wallets li {
+    min-height: 31px;
+    padding-block: 2px;
+  }
+}
+/* Shorter screens: tighter steps, title and wallet rows, so the window stays as tall as the Creators one. */
+@media (max-height: 850px) and (min-width: 761px) {
+  .partner-heading {
+    font-size: 34px;
+    margin-bottom: 14px;
+  }
+  .partner-progress {
+    margin-bottom: 12px;
+  }
+  .partner-progress .journey-meter {
+    margin-top: 10px;
+  }
+  .journey-task.partner-task .partner-workspace .task-title {
+    font-size: 26px;
+  }
+  .partner-title-row {
+    margin-bottom: 10px;
+  }
+  .partner-panel {
+    height: calc(8 * 28px + 7 * 3px + 52px);
+  }
+  .partner-wallets {
+    gap: 3px;
+  }
+  .partner-wallets li {
+    min-height: 28px;
+    padding-block: 1px;
+  }
+}
+@media (max-width: 760px) {
+  .partner-heading {
+    font-size: 28px;
+    margin-bottom: 14px;
+  }
+  .partner-template-icon {
+    display: none;
+  }
+  .partner-row-labels,
+  .partner-rows li {
+    grid-template-columns: 22px minmax(0, 1fr) minmax(0, 1.3fr);
+    gap: 6px;
+  }
+  .journey-shell .partner-rows li input {
+    padding: 0 8px;
+  }
+  .journey-task.partner-task .task-title {
+    font-size: 28px;
+  }
+  .collab-member.partner-shell .journey-right {
+    padding-top: 0;
+  }
+  .partner-progress {
+    margin-bottom: 24px;
+  }
+  .partner-progress .journey-step {
+    font-size: 13px;
+  }
+  .partner-pill.is-pending {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+  .partner-option span {
+    min-width: 84px;
+    padding: 9px 16px;
+  }
+  .partner-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .partner-form-side .task-navigation {
+    margin-top: 22px;
+  }
+  .partner-form-side {
+    margin-top: 16px;
+  }
+  .journey-task.partner-task .partner-form .task-title {
+    font-size: 28px;
+  }
+  .partner-wallets li {
+    grid-template-columns: 40px minmax(0, 1fr) auto;
+    padding: 6px 8px;
+  }
+  /* Phones: the name gets its own line above the tabs, and the panel grows with its content. */
+  .partner-title-row {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .journey-task.partner-task .partner-title-row .task-title {
+    flex-basis: 100%;
+    white-space: normal;
+  }
+  .partner-panel {
+    height: auto;
+  }
+  .partner-wallets {
+    overflow: visible;
+  }
+  .partner-paste textarea {
+    flex: none;
+    min-height: 180px;
+  }
+  .partner-aside .collab-profile {
+    margin-top: 4px;
+  }
+  /* Approved collabs pick a group first, then manage its wallets. */
+  .collab-member.partner-shell .journey-right:has(.partner-workspace) {
+    order: 0;
+    padding-top: 24px;
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+  .collab-member.partner-shell .journey-aside:has(.partner-groups) {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #6b70a866;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .partner-option span,
+  .partner-groups button {
+    transition: none;
+  }
+  .partner-pill.is-pending:after,
+  .partner-template:after {
+    animation: none;
+  }
+}

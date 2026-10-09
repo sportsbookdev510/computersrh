@@ -1,0 +1,543 @@
+/* FAQ: the collection and the upcoming guide on the left, questions on the right, on one screen. */
+/* The page fits one screen, so it needs less room below for the music player. */
+body[data-page="faq"] .journey-shell.faq-shell {
+  padding-bottom: 24px;
+}
+.faq-shell .window-interior {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
+  min-height: 0;
+  padding-top: 32px;
+  padding-bottom: 28px;
+}
+.faq-shell .journey-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.faq-shell .journey-right {
+  justify-content: flex-start;
+}
+.faq-shell a {
+  color: var(--mint);
+}
+.faq-shell a:hover {
+  text-decoration: underline;
+}
+.faq-shell a:focus-visible,
+.faq-item > summary:focus-visible {
+  outline: 2px solid #dfcef3;
+  outline-offset: 3px;
+}
+
+/* The collection: 3,333, free mint and the three equal paths. */
+.faq-kicker {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 8px;
+  color: var(--mint);
+  font: 400 14px/1.3 var(--body);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.faq-kicker .icon {
+  width: 17px;
+  height: 17px;
+}
+/* The two tiles sit beside the title and wrap under it rather than overflow a narrow column. */
+.faq-collection-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 14px;
+}
+.faq-collection-title {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin: 0;
+  color: #fff8e8;
+  font: 700 50px/1 var(--display);
+  letter-spacing: -2px;
+}
+.faq-collection-title span {
+  color: var(--blush);
+  font-size: 24px;
+  letter-spacing: 0;
+}
+.faq-mint {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 8px 12px 9px;
+  background: #09152f;
+  border: 1px solid #3fae93;
+  border-radius: 2px;
+  box-shadow: inset 0 3px #050e24, 0 3px #040c20;
+}
+.faq-mint-row {
+  display: flex;
+  gap: 6px;
+  flex: 0 0 auto;
+}
+.faq-mint.is-date {
+  border-color: #65618e;
+}
+.faq-mint.is-date strong {
+  color: #fff0d9;
+}
+.faq-mint span {
+  color: #bdb3d7;
+  font: 400 11px/1.2 var(--body);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.faq-mint strong {
+  color: var(--mint);
+  font: 700 24px/1 var(--display);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.faq-split {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+  height: 14px;
+  margin: 12px 0 8px;
+  padding: 2px;
+  background: #050d22;
+  border: 1px solid #4d4a7a;
+}
+.faq-split .is-creators,
+.faq-path.is-creators {
+  --path: var(--mint);
+}
+.faq-split .is-collabs,
+.faq-path.is-collabs {
+  --path: var(--lilac);
+}
+.faq-split .is-players,
+.faq-path.is-players {
+  --path: var(--gold);
+}
+.faq-split i {
+  display: block;
+  background: var(--path);
+}
+.faq-paths {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.faq-path {
+  display: grid;
+  grid-template-columns: 78px minmax(0, 1fr);
+  align-items: start;
+  gap: 12px;
+  padding: 8px 14px 9px 12px;
+  background: #0b1734;
+  border: 1px solid #3e4677;
+  border-left: 3px solid var(--path);
+}
+.faq-path .faq-path-count {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin: 0;
+  color: var(--path);
+  font: 700 22px/1.25 var(--display);
+  font-variant-numeric: tabular-nums;
+}
+.faq-path-count span {
+  color: #bdb3d7;
+  font: 400 10px/1.2 var(--body);
+  letter-spacing: 0.14em;
+}
+.faq-path h3 {
+  margin: 0 0 2px;
+  color: #fff3df;
+  font: 700 15px/1.35 var(--display);
+}
+.faq-path p {
+  margin: 0;
+  color: #b4b9d7;
+  font: 400 13px/1.45 var(--body);
+}
+.faq-path .faq-path-footer {
+  margin-top: 3px;
+  color: #d5d2e8;
+}
+.faq-path-footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+.faq-path-footer .icon {
+  width: 14px;
+  height: 14px;
+  stroke-width: 2.4;
+}
+
+/* Game mechanics: blurred placeholder cards until the guide is published. */
+.faq-heading-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.faq-subheading {
+  margin: 0;
+  color: #fff3df;
+  font: 700 18px/1.2 var(--display);
+  white-space: nowrap;
+}
+.faq-soon {
+  white-space: nowrap;
+  padding: 4px 9px;
+  border: 1px solid var(--mint);
+  color: var(--mint);
+  font: 400 11px/1.2 var(--body);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.faq-locked {
+  position: relative;
+  overflow: hidden;
+  border: 1px dashed #5b5f93;
+}
+.faq-ghosts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  padding: 8px;
+  filter: blur(3.5px);
+  opacity: 0.95;
+  user-select: none;
+}
+.faq-ghost {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-height: 54px;
+  padding: 8px 10px;
+  background: #0b1734;
+  border: 1px solid #3e4677;
+}
+.faq-ghost i {
+  width: 16px;
+  height: 16px;
+  margin-bottom: 2px;
+  background: linear-gradient(135deg, var(--mint), #2b7fa8);
+}
+.faq-ghost:nth-child(2) i {
+  background: linear-gradient(135deg, var(--lilac), #6a55b8);
+}
+.faq-ghost:nth-child(3) i {
+  background: linear-gradient(135deg, var(--gold), #c0763f);
+}
+.faq-ghost:nth-child(4) i {
+  background: linear-gradient(135deg, var(--blush), #a8577f);
+}
+.faq-ghost b {
+  width: 70%;
+  height: 9px;
+  background: #fff0d9;
+}
+.faq-ghost span {
+  width: 100%;
+  height: 6px;
+  background: #6d739f;
+}
+.faq-ghost span.is-short {
+  width: 55%;
+}
+.faq-lock {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0;
+  background: radial-gradient(
+    ellipse at center,
+    #0d193ad9 0%,
+    #0d193a80 55%,
+    transparent 100%
+  );
+  color: #fff3df;
+  font: 400 14px/1.4 var(--body);
+  text-align: center;
+}
+.faq-lock .icon {
+  width: 20px;
+  height: 20px;
+  padding: 6px;
+  box-sizing: content-box;
+  color: var(--mint);
+  background: #09152f;
+  border: 1px solid #3fae93;
+  stroke-width: 2;
+}
+
+/* Once the game guide is open: chapter tiles instead of the placeholder. */
+.faq-soon.is-open {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+.faq-guide {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+.faq-guide a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 12px;
+  background: #0b1734;
+  border: 1px solid #3e4677;
+  border-left: 3px solid var(--mint);
+  color: #fff3df;
+  font: 400 14px/1.3 var(--body);
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s;
+}
+.faq-guide a:hover {
+  background: #12234a;
+  border-color: #6b70a8;
+  text-decoration: none;
+}
+.faq-guide a.faq-guide-all {
+  grid-column: 1/-1;
+  justify-content: space-between;
+  gap: 10px;
+  border-left-color: var(--gold);
+  color: var(--gold);
+}
+.faq-guide-all .icon {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2.4;
+}
+
+/* Questions: one open at a time (details name="faq"). */
+.faq-heading {
+  margin: 0 0 12px;
+  color: #fff3df;
+  font: 700 24px/1.2 var(--display);
+  letter-spacing: -0.5px;
+}
+.faq-list {
+  display: grid;
+  gap: 6px;
+}
+.faq-item {
+  background: #0b1734;
+  border: 1px solid #3e4677;
+  transition: border-color 0.2s;
+}
+.faq-item[open] {
+  border-color: #6b70a8;
+  background: #0d1b3b;
+}
+.faq-item > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-width: 0;
+  min-height: 40px;
+  padding: 8px 14px;
+  border-radius: 0;
+  color: #fff3df;
+  font: 400 15px/1.4 var(--body);
+  text-align: left;
+  cursor: pointer;
+  place-items: initial;
+}
+.faq-item > summary:hover {
+  background: #12234a;
+}
+.faq-toggle {
+  position: relative;
+  flex: 0 0 14px;
+  width: 14px;
+  height: 14px;
+  color: var(--mint);
+}
+.faq-toggle:before,
+.faq-toggle:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 14px;
+  height: 2px;
+  background: currentColor;
+  transition: transform 0.2s ease;
+}
+.faq-toggle:after {
+  transform: rotate(90deg);
+}
+.faq-item[open] .faq-toggle:after {
+  transform: rotate(0);
+}
+.faq-answer {
+  padding: 0 14px 12px;
+  color: #d5d2e8;
+  font: 400 14px/1.6 var(--body);
+}
+.faq-answer p {
+  margin: 0 0 8px;
+}
+.faq-answer p:last-child {
+  margin-bottom: 0;
+}
+.faq-schedule {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin: 8px 0 0;
+}
+.faq-schedule div {
+  padding: 8px 12px;
+  background: #09152f;
+  border: 1px solid #65618e;
+}
+.faq-schedule dt {
+  margin: 0 0 5px;
+  color: #bdb3d7;
+  font: 400 11px/1.2 var(--body);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.faq-schedule dd {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin: 0;
+}
+.faq-schedule time {
+  color: #fff0d9;
+  font: 700 14px/1.3 var(--display);
+}
+.faq-schedule span {
+  color: #b4b9d7;
+  font-size: 12px;
+}
+
+@media (max-width: 1100px) and (min-width: 761px) {
+  .faq-collection-title {
+    font-size: 46px;
+  }
+  .faq-mint strong {
+    font-size: 22px;
+  }
+  .faq-schedule {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-height: 900px) and (min-width: 761px) {
+  body[data-page="faq"] .journey-shell.faq-shell {
+    padding-bottom: 6px;
+  }
+  .faq-shell .window-interior {
+    padding-top: 22px;
+    padding-bottom: 20px;
+  }
+  .faq-shell .journey-aside {
+    gap: 14px;
+  }
+  .faq-collection-title {
+    font-size: 46px;
+  }
+  .faq-mint {
+    padding-block: 7px 8px;
+  }
+  .faq-mint strong {
+    font-size: 22px;
+  }
+  .faq-heading {
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+  .faq-item > summary {
+    min-height: 36px;
+    padding-block: 6px;
+  }
+  .faq-answer {
+    font-size: 13px;
+  }
+  .faq-path {
+    padding-block: 6px 7px;
+  }
+}
+@media (max-width: 760px) {
+  body[data-page="faq"] .journey-shell.faq-shell {
+    padding-bottom: 96px;
+  }
+  .faq-kicker {
+    font-size: 13px;
+  }
+  .faq-collection-title {
+    font-size: 44px;
+    letter-spacing: -1px;
+  }
+  .faq-collection-title span {
+    font-size: 19px;
+  }
+  .faq-collection-head {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .faq-mint-row > .faq-mint {
+    flex: 1 1 0;
+  }
+  .faq-mint {
+    padding: 8px 12px;
+  }
+  .faq-mint strong {
+    font-size: 21px;
+  }
+  .faq-path {
+    grid-template-columns: 64px minmax(0, 1fr);
+    gap: 10px;
+  }
+  .faq-path .faq-path-count {
+    font-size: 19px;
+  }
+  .faq-ghosts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .faq-lock {
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 16px;
+    font-size: 13px;
+  }
+  .faq-heading {
+    font-size: 22px;
+  }
+  .faq-heading-row {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .faq-schedule {
+    grid-template-columns: 1fr;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .faq-toggle:before,
+  .faq-toggle:after,
+  .faq-item {
+    transition: none;
+  }
+}
